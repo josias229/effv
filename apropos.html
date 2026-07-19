@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | Église du Festival de la Foi Vivante</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HERO & EXACT NAVBAR -->
+    <section class="hero-about">
+        <!-- Background elements -->
+        <img src="https://images.unsplash.com/photo-1438283173091-5dbf5c5a3206?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Background" class="bg-img">
+        <div class="hero-overlay"></div>
+
+        <!-- Exact Navbar Structure -->
+        <header class="navbar-custom">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'" alt="" height="65px" width="auto">
+                <div>
+                    <span>ÉGLISE DU FESTIVAL</span><br>
+                    <span>DE LA FOI VIVANTE</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événement</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </nav>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu">
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événement</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </div>
+        </header>
+        
+        <div class="hero-content container text-white">
+            <span class="d-block text-brand-accent tracking-widest text-uppercase mb-3" style="font-size: 14px; font-weight: 600;">Un Havre de Paix, de Puissance et de Révélation</span>
+            <h1 class="font-heading tracking-tighter mb-4 text-uppercase" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.1;">
+                Église du Festival <br/><span class="text-brand-accent">de la Foi Vivante</span>
+            </h1>
+            <p class="lead mx-auto text-light" style="max-width: 700px; font-weight: 300;">
+                Engagés dans la libération totale de l'humanité de toutes les oppressions par la prédication de la parole de foi.
+            </p>
+        </div>
+    </section>
+
+    <!-- Desktop Tabs -->
+    <div class="tabs-container">
+        <div class="container">
+            <nav class="desktop-tabs" id="desktop-tabs">
+                <button class="tab-btn active" data-target="identite">Notre Identité</button>
+                <button class="tab-btn" data-target="piliers">Les 12 Piliers</button>
+                <button class="tab-btn" data-target="leadership">Notre Leadership</button>
+                <button class="tab-btn" data-target="programme">Programme</button>
+                <button class="tab-btn" data-target="impact">Impact Social</button>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Mobile Tabs Select -->
+    <div class="mobile-tabs bg-brand-lightgrey p-3 border-bottom sticky-top" style="z-index: 40;">
+        <select id="mobile-tab-select" class="form-select text-uppercase tracking-wider font-heading fw-bold">
+            <option value="identite">Notre Identité</option>
+            <option value="piliers">Les 12 Piliers</option>
+            <option value="leadership">Notre Leadership</option>
+            <option value="programme">Programme</option>
+            <option value="impact">Impact Social</option>
+        </select>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 bg-white py-5">
+        <div class="container py-4">
+            
+            <!-- ONGLET: NOTRE IDENTITÉ -->
+            <div id="identite" class="tab-content active">
+                
+                <div class="identite-intro mb-5">
+                    <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter mb-3">Plus qu'une église, un Mandat Divin</h2>
+                    <p class="fs-5 fw-light text-secondary mb-3">
+                        L'<strong>Église du Festival de la Foi Vivante</strong> est une communauté spirituelle dynamique située à Calavi Bidossessi, au cœur de la commune d'Abomey-Calavi au Bénin. Notre mission n'est pas simplement de rassembler des fidèles, mais d'équiper des croyants pour qu'ils opèrent dans la plénitude de leur destinée.
+                    </p>
+                    <p class="fs-5 fw-light text-secondary mb-0">
+                        Nous sommes ancrés dans la parole prophétique et animés par le feu du Saint-Esprit, bâtissant une génération de vainqueurs qui influencent positivement leur environnement immédiat et la société tout entière.
+                    </p>
+                </div>
+
+                <div class="row g-5 align-items-center mt-2">
+                    <div class="col-lg-6">
+                        <h3 class="font-heading fs-2 fw-black text-uppercase text-brand-dark tracking-tighter border-bottom pb-3 mb-4">Nos Racines & Notre Filiation</h3>
+                        <p class="text-secondary mb-4">
+                            L'EFFV s'inscrit fièrement dans le sillage spirituel et théologique de la <strong>Living Faith Church Worldwide</strong> (également connue sous le nom de Winners' Chapel International). 
+                        </p>
+                        
+                        <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="icon-circle flex-shrink-0"><i class="fas fa-scroll"></i></div>
+                            <div>
+                                <h5 class="fw-bold text-dark text-uppercase tracking-wider" style="font-size: 14px;">Le Mandat de Mai 1981</h5>
+                                <p class="text-secondary small mt-1 mb-0">Nous opérons sous la grâce de l'alliance divine transmise par le biais du "Mandat de Libération" reçu par l'Évêque David Oyedepo : libérer le monde de l'oppression par la foi.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start gap-3 mb-4">
+                            <div class="icon-circle flex-shrink-0"><i class="fas fa-users"></i></div>
+                            <div>
+                                <h5 class="fw-bold text-dark text-uppercase tracking-wider" style="font-size: 14px;">Une Position Stratégique</h5>
+                                <p class="text-secondary small mt-1 mb-0">Située près du principal campus universitaire du Bénin (UAC), notre église sert de pont entre l'intellect et la spiritualité, encadrant étudiants, professionnels et familles de Calavi.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="icon-circle flex-shrink-0"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h5 class="fw-bold text-dark text-uppercase tracking-wider" style="font-size: 14px;">Philosophie de Croissance</h5>
+                                <p class="text-secondary small mt-1 mb-0">Nous croyons fermement qu'il "n'y a rien de petit qui ne puisse devenir grand". Chaque membre est encouragé à croître spirituellement, professionnellement et socialement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 position-relative">
+                        <!-- Decorative bg -->
+                        <div class="bg-brand-lightgrey position-absolute rounded" style="inset: -1rem; transform: rotate(3deg); z-index: 0;"></div>
+                        <img src="images/effv_church.jpeg" alt="Communauté en prière" class="img-fluid rounded shadow-lg grayscale hover-grayscale-0 transition-all position-relative" style="z-index: 1;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET: LES 12 PILIERS -->
+            <div id="piliers" class="tab-content">
+                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+                    <span class="d-block text-brand-accent fw-bold tracking-widest text-uppercase mb-2 small">Fondations Spirituelles</span>
+                    <h2 class="display-5 font-heading fw-bold text-brand-dark text-uppercase tracking-tighter mb-4">Les 12 Piliers de Notre Ministère</h2>
+                    <p class="text-secondary fs-5 fw-light">
+                        L'Église du Festival de la Foi Vivante repose sur douze vérités bibliques fondamentales. Ces piliers constituent la base de nos enseignements, de notre foi et de notre action au quotidien.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Pillar 1 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #0d6efd; --theme-bg: rgba(13, 110, 253, 0.02); --theme-border: rgba(13, 110, 253, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-compass"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Vision & Direction Divine</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Je t'instruirai et te montrerai la voie que tu dois suivre; Je te conseillerai, j'aurai le regard sur toi."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Psaume 32:8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #6f42c1; --theme-bg: rgba(111, 66, 193, 0.02); --theme-border: rgba(111, 66, 193, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-dove"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Délivrance & Libération</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Afin que tu leur ouvres les yeux, pour qu'ils passent des ténèbres à la lumière et de la puissance de Satan à Dieu."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Actes 26:18</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #fd7e14; --theme-bg: rgba(253, 126, 20, 0.02); --theme-border: rgba(253, 126, 20, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Foi Vivante</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Si quelqu'un dit à cette montagne: Ote-toi de là et jette-toi dans la mer, et s'il ne doute point en son coeur... cela lui sera accordé."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Marc 11:23</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 4 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #d63384; --theme-bg: rgba(214, 51, 132, 0.02); --theme-border: rgba(214, 51, 132, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-praying-hands"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Louange & Adoration</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Que les louanges de Dieu soient dans leur bouche, Et le glaive à deux tranchants dans leur main."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Psaume 149:6</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 5 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #e0a800; --theme-bg: rgba(224, 168, 0, 0.02); --theme-border: rgba(224, 168, 0, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Gloire & Sanctification</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Je regardai, et voici, il vint du septentrion un vent impétueux, une grosse nuée, et une gerbe de feu..."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Ézéchiel 1:4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 6 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #20c997; --theme-bg: rgba(32, 201, 151, 0.02); --theme-border: rgba(32, 201, 151, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Signes & Merveilles</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Mais Dieu, qui est riche en miséricorde, à cause du grand amour dont il nous a aimés..."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Éphésiens 2:4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 7 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #dc3545; --theme-bg: rgba(220, 53, 69, 0.02); --theme-border: rgba(220, 53, 69, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-globe-africa"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">L'Onction Apostolique</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"L'Éternel des armées prépare à tous les peuples, sur cette montagne, un festin de mets succulents..."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Ésaïe 25:6</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 8 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #198754; --theme-bg: rgba(25, 135, 84, 0.02); --theme-border: rgba(25, 135, 84, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Le Zèle Évangélique</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Allez, faites de toutes les nations des disciples, les baptisant au nom du Père, du Fils et du Saint-Esprit..."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Matthieu 28:19</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 9 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #059669; --theme-bg: rgba(5, 150, 105, 0.02); --theme-border: rgba(5, 150, 105, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Prospérité Divine</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Bien-aimé, je souhaite que tu prospères à tous égards et sois en bonne santé, comme prospère l'état de ton âme."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> 3 Jean 1:2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 10 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #4f46e5; --theme-bg: rgba(79, 70, 229, 0.02); --theme-border: rgba(79, 70, 229, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">La Voix Prophétique</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Fils de l'homme, je t'établis comme sentinelle sur la maison d'Israël. Tu écouteras la parole qui sortira de ma bouche..."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Ézéchiel 3:17</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 11 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #087f96; --theme-bg: rgba(8, 127, 150, 0.02); --theme-border: rgba(8, 127, 150, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Renseignements (Sagesse)</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Pour qu'ils reçoivent, par la foi en moi, le pardon des péchés et l'héritage avec les sanctifiés."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> Actes 26:18</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pillar 12 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="pillar-card group d-flex flex-column" style="--theme-color: #0077b6; --theme-bg: rgba(0, 119, 182, 0.02); --theme-border: rgba(0, 119, 182, 0.1);">
+                            <div class="pillar-top-line"></div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="pillar-icon-wrapper me-3">
+                                    <i class="fas fa-wind"></i>
+                                </div>
+                                <h4 class="font-heading fw-bold fs-6 text-uppercase text-brand-dark mb-0 lh-sm">Vagues du Saint-Esprit</h4>
+                            </div>
+                            <p class="small text-secondary flex-grow-1 font-italic mb-3 lh-base">"Ma parole ne reposait pas sur les discours de la sagesse, mais sur une démonstration d'Esprit et de puissance."</p>
+                            <div class="mt-auto pt-3 border-top" style="border-color: var(--theme-border) !important;">
+                                <p class="small fw-bold mb-0" style="color: var(--theme-color);"><i class="fas fa-bible me-1"></i> 1 Corinthiens 2:4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET: NOTRE LEADERSHIP -->
+<div id="leadership" class="tab-content">
+    <div class="row g-5 align-items-start">
+        
+        <div class="col-lg-8">
+            <h2 class="font-heading fs-1 fw-bold text-uppercase text-brand-dark tracking-tighter mb-4 border-bottom pb-3">Un Vaisseau Choisi : Pasteur Eugène Megni</h2>
+            <p class="text-secondary fs-5 mb-5 fw-light">
+                Toute grande œuvre divine requiert un leader consacré. L'Église du Festival de la Foi Vivante est bénie d'être sous la direction pastorale du Professeur Eugène Megni, un homme dont la vie témoigne que la rigueur intellectuelle n'est pas l'ennemie de la foi, mais son alliée.
+            </p>
+            
+            <div class="timeline-item">
+                <h4 class="fw-bold fs-5 text-dark mb-2">Appel Pastoral</h4>
+                <p class="text-secondary">En tant que Pasteur Responsable de l'EFFV, il dédie sa vie à enseigner la parole de foi, à équiper les croyants et à manifester la puissance de Dieu au sein de la communauté de Calavi Bidossessi et au-delà.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h4 class="fw-bold fs-5 text-dark mb-2">Excellence Académique (UAC)</h4>
+                <p class="text-secondary">Dieu utilise des vases préparés. Professeur Titulaire de Géographie Physique, il dirige l'École Doctorale (FLASH) et le Laboratoire de Climatologie (LACEEDE), illustrant que le croyant est appelé à être "la tête et non la queue" dans son domaine professionnel.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h4 class="fw-bold fs-5 text-dark mb-2">Un Ministère d'Équilibre</h4>
+                <p class="text-secondary">Il prône un christianisme holistique : une ferveur spirituelle ardente le dimanche, couplée à une discipline de fer et une compétence reconnue sur le lieu de travail du lundi au samedi.</p>
+            </div>
+
+            <div class="p-4 border rounded bg-light text-center fst-italic text-secondary mt-5 fs-5">
+                "La science nous permet d'analyser les problèmes terrestres, mais c'est la foi qui nous donne l'espérance et le pouvoir de les transformer. Les deux, placés entre les mains de Dieu, sont une force pour l'humanité."
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-5 mt-lg-0">
+            <div class="bg-brand-grey text-white p-5 shadow-lg position-relative mt-5 rounded-4">
+                
+                <!-- Wrapper rectangulaire corrigé -->
+                <div class="pastor-img-wrapper">
+                    <!-- Classes fluid et object-cover retirées au profit du CSS -->
+                    <img src="images/Pasteur.jpg" onerror="this.src='https://placehold.co/400x500/1a472a/FFF?text=EM'" alt="Pasteur Eugène Megni">
+                </div>
+
+                <div class="text-center mt-5 mb-4">
+                    <h3 class="font-heading fs-5 fw-bold text-uppercase tracking-wider text-brand-accent">Pasteur Eugène Megni</h3>
+                    <p class="small text-secondary fw-light text-white-50">Responsable, EFFV</p>
+                </div>
+
+                <div>
+                    <h4 class="font-heading fs-6 fw-bold text-uppercase tracking-widest border-bottom border-secondary pb-2 mb-3">Responsabilités :</h4>
+                    <ul class="list-unstyled small fw-light text-white-50">
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                            <span class="text-brand-accent fw-bold"><i class="fas fa-check"></i></span>
+                            <span>Pasteur Responsable (EFFV)</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2 mb-2">
+                            <span class="text-brand-accent fw-bold"><i class="fas fa-check"></i></span>
+                            <span>Professeur Titulaire (UAC)</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-2">
+                            <span class="text-brand-accent fw-bold"><i class="fas fa-check"></i></span>
+                            <span>Directeur de l'École Doctorale FLASH</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="pasteur.html" class="text-white-50 text-decoration-none small text-uppercase" style="font-size: 11px;">Voir sa biographie &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ONGLET: IMPACT SOCIAL -->
+            <div id="impact" class="tab-content">
+                <div class="mx-auto" style="max-width: 900px;">
+                    <h2 class="display-6 font-heading fw-bold text-brand-dark text-uppercase tracking-tighter mb-4 text-center">L'Église dans la Cité : Impact Social & Scientifique</h2>
+                    <p class="fs-5 text-secondary fw-light text-center mb-5">L'EFFV ne se limite pas aux murs du sanctuaire. À travers les travaux de recherche dirigés par notre Pasteur, l'Église participe activement à la résolution des crises de santé publique au Bénin.</p>
+                    
+                    <div class="bg-brand-lightgrey border-start border-brand-accent border-4 p-4 mb-5">
+                        <h4 class="fw-bold text-dark mb-2 fs-5">La Géographie Physique au Service de la Population</h4>
+                        <p class="text-secondary small mb-0">C'est la matérialisation de l'amour du Christ pour les plus vulnérables. Les recherches menées au sein du LACEEDE sur la ville de Cotonou visent directement à sauver des vies en améliorant l'environnement urbain.</p>
+                    </div>
+
+                    <div class="table-responsive shadow-sm rounded border mb-5">
+                        <table class="table table-hover mb-0">
+                            <thead class="bg-brand-dark text-white font-heading text-uppercase tracking-widest small">
+                                <tr>
+                                    <th scope="col" class="py-3 px-4 border-0">Domaine d'Action</th>
+                                    <th scope="col" class="py-3 px-4 border-0">Constats Scientifiques & Solutions Apportées</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-secondary small">
+                                <tr>
+                                    <th scope="row" class="px-4 py-3 fw-bold text-dark bg-white">Zone d'Étude</th>
+                                    <td class="px-4 py-3 bg-white">Ville de Cotonou et ses périphéries lagunaires vulnérables.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="px-4 py-3 fw-bold text-dark bg-light">Qualité de l'Eau</th>
+                                    <td class="px-4 py-3 bg-light">Identification de la pollution chimique (résidus de DDT) causant des maladies hydriques dans les communautés défavorisées.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="px-4 py-3 fw-bold text-dark bg-white">Solutions Proposées</th>
+                                    <td class="px-4 py-3 bg-white">Conception de systèmes de filtration domestique et plaidoyer pour une restructuration de l'assainissement urbain.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="px-4 py-3 fw-bold text-dark bg-light">Impact Politique</th>
+                                    <td class="px-4 py-3 bg-light">Mise à disposition de données cruciales pour les décideurs publics (Direction de l'Assainissement) afin d'améliorer les conditions de vie.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <p class="text-secondary fst-italic fw-light">"Être la lumière du monde, c'est aussi utiliser la science pour chasser les ténèbres de l'ignorance et de la maladie."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET: PROGRAMME -->
+            <div id="programme" class="tab-content">
+                <div class="mb-5 text-center">
+                    <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter mb-3">Notre Programme <span class="text-brand-accent">Hebdomadaire & Mensuel</span></h2>
+                    <p class="fs-5 fw-light text-secondary mx-auto" style="max-width: 800px;">
+                        Rejoignez-nous lors de nos différents rassemblements pour expérimenter la présence de Dieu, grandir dans la foi et vivre la communion fraternelle.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Programme Hebdomadaire -->
+                    <div class="col-lg-6">
+                        <div class="bg-brand-lightgrey p-4 p-md-5 rounded-4 h-100 border border-light shadow-sm">
+                            <h3 class="font-heading fs-4 fw-bold text-brand-accent mb-4 border-bottom pb-3"><i class="far fa-calendar-alt me-2"></i>Programme Hebdomadaire</h3>
+                            
+                            <ul class="list-unstyled">
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-white text-brand-dark rounded-circle p-3 shadow-sm me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-church fs-5"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Culte Dominical</h5>
+                                            <p class="text-secondary mb-0 fw-bold">Dimanche : 08h00 - 10h30</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-white text-brand-dark rounded-circle p-3 shadow-sm me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-bible fs-5"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Culte d'Enseignement</h5>
+                                            <p class="text-secondary mb-0 fw-bold">Mercredi : 18h30 - 20h30</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-white text-brand-dark rounded-circle p-3 shadow-sm me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-users fs-5"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Cellule de Maison</h5>
+                                            <p class="text-secondary mb-0 fw-bold">Jeudi (Soirée)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-0">
+                                    <div class="d-flex align-items-start">
+                                        <div class="bg-white text-brand-dark rounded-circle p-3 shadow-sm me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-praying-hands fs-5"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Prières Quotidiennes (Lundi au Vendredi)</h5>
+                                            <p class="text-secondary mb-0"><span class="fw-bold text-dark">Matin :</span> 05h45 - 06h45 (Prière Matinale)<br><span class="fw-bold text-dark">Midi :</span> 13h00 - 14h00 (Prière Midi)</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Programme Mensuel -->
+                    <div class="col-lg-6">
+                        <div class="bg-brand-dark text-white p-4 p-md-5 rounded-4 h-100 shadow-lg">
+                            <h3 class="font-heading fs-4 fw-bold text-white mb-4 border-bottom border-secondary pb-3"><i class="far fa-calendar-check me-2 text-brand-accent"></i>Programme Mensuel</h3>
+                            
+                            <ul class="list-unstyled">
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="text-brand-accent fs-4 me-3 mt-1" style="width: 30px; text-align: center;"><i class="far fa-clock"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1 text-white">Veillée de Prière</h5>
+                                            <p class="text-white-50 mb-0">1er Vendredi du mois : 00h00 - 03h00</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="text-brand-accent fs-4 me-3 mt-1" style="width: 30px; text-align: center;"><i class="fas fa-fire"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1 text-white">Emphase Spirituelle</h5>
+                                            <p class="text-white-50 mb-0">Tous les débuts de mois : 3 Jours de jeûne et prière</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="text-brand-accent fs-4 me-3 mt-1" style="width: 30px; text-align: center;"><i class="fas fa-dove"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1 text-white">1er Dimanche du mois</h5>
+                                            <p class="text-white-50 mb-0">Apothéose de l'Emphase Spirituelle</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="text-brand-accent fs-4 me-3 mt-1" style="width: 30px; text-align: center;"><i class="fas fa-cross"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1 text-white">2ème Dimanche du mois</h5>
+                                            <p class="text-white-50 mb-0">Culte de Sainte Cène</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="text-brand-accent fs-4 me-3 mt-1" style="width: 30px; text-align: center;"><i class="fas fa-hand-holding-water"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1 text-white">3ème Dimanche du mois</h5>
+                                            <p class="text-white-50 mb-0">Culte d'Huile d'Onction</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-0">
+                                    <div class="d-flex align-items-start">
+                                        <div class="text-brand-accent fs-4 me-3 mt-1" style="width: 30px; text-align: center;"><i class="fas fa-hands-helping"></i></div>
+                                        <div>
+                                            <h5 class="fw-bold mb-1 text-white">4ème Dimanche du mois</h5>
+                                            <p class="text-white-50 mb-0">Culte d'Action de Grâce</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SECTION MANDAT -->
+    <section class="bg-brand-lightgrey py-5 border-top">
+        <div class="container text-center py-4" style="max-width: 800px;">
+            <h2 class="font-heading fs-2 fw-bold text-uppercase text-brand-dark tracking-tighter mb-4">Le Mandat de Libération</h2>
+            <p class="fs-4 fst-italic text-dark lh-base font-heading">
+                "L'heure est venue de libérer le monde de toutes les oppressions du diable par la prédication de la parole de foi."
+            </p>
+            <div class="mx-auto bg-brand-accent mt-4 mb-3" style="width: 60px; height: 4px;"></div>
+            <p class="small fw-bold text-uppercase tracking-widest text-secondary mb-0">Évêque David O. Oyedepo (Mai 1981)</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-5" style="border-top: 4px solid var(--brand-accent);">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-4 font-heading text-uppercase tracking-widest fw-bold" style="font-size: 11px;">
+                <a href="index.html" class="text-white-50 text-decoration-none">Accueil</a>
+                <a href="apropos.html" class="text-white text-decoration-none">À Propos</a>
+                <a href="mandat.html" class="text-white-50 text-decoration-none">Le Mandat</a>
+                <a href="mediatheque.html" class="text-white-50 text-decoration-none">Médiathèque</a>
+                <a href="ibfpd.html" class="text-white-50 text-decoration-none">IBFPD</a>
+                <a href="famille_chretienne.html" class="text-white-50 text-decoration-none">Famille Chrétienne</a>
+                <a href="telechargements.html" class="text-white-50 text-decoration-none">Téléchargements</a>
+                <a href="education.html" class="text-white-50 text-decoration-none">Éducation</a>
+                <a href="evenement.html" class="text-white-50 text-decoration-none">Événement</a>
+            </div>
+            
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="small text-white-50 text-uppercase tracking-wider" style="font-size: 11px;">
+                <p class="mb-1">&copy; 2026 Église du Festival de la Foi Vivante - Calavi Bidossessi, Bénin. Tous droits réservés.</p>
+                <p class="opacity-75 mb-0">Un ministère en lien avec la Living Faith Church Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médiathèque | Église du Festival de la Foi Vivante</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HERO & NAVBAR -->
+    <section class="hero-media">
+        <!-- Background elements -->
+        <img src="images/mediatheque.jpg"
+            alt="Background" class="bg-img">
+        <div class="hero-overlay"></div>
+
+        <!-- Navbar Structure -->
+        <header class="navbar-custom">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'"
+                    alt="" height="65px" width="auto">
+                <div>
+                    <span>ÉGLISE DU FESTIVAL</span><br>
+                    <span>DE LA FOI VIVANTE</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événements</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </nav>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu">
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événements</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </div>
+        </header>
+
+
+        <div class="hero-content container text-white">
+            <span class="d-block text-brand-accent tracking-widest text-uppercase mb-3"
+                style="font-size: 14px; font-weight: 600;">Nourrissez Votre Esprit</span>
+            <h1 class="font-heading tracking-tighter mb-4 text-uppercase"
+                style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.1;">
+                Ressources & <br /><span class="text-brand-accent">Médiathèque</span>
+            </h1>
+            <p class="lead mx-auto text-light" style="max-width: 700px; font-weight: 300;">
+                Retrouvez tous les enseignements puissants et transformateurs du Pasteur Eugène Megni, classés pour
+                votre croissance spirituelle.
+            </p>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="bg-brand-lightgrey py-5">
+        <div class="container">
+            <div class="countdown-banner overflow-hidden mx-auto" style="max-width: 900px;">
+                <div class="row g-0 align-items-stretch">
+                    <!-- Text / Details -->
+                    <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
+                        <div>
+                            <span
+                                class="badge bg-white text-brand-accent mb-3 px-3 py-2 fw-bold tracking-widest text-uppercase">À
+                                Venir</span>
+                            <h3 class="font-heading fw-bold fs-3 mb-3">Culte d'Onction et de Puissance</h3>
+                            <div class="mb-4 opacity-75 fw-light" id="event-date-display">
+                                <p class="mb-2"><i class="far fa-calendar-alt me-2 text-white"></i> Prochain Dimanche</p>
+                                <p class="mb-0"><i class="far fa-clock me-2 text-white"></i> 08:00 - 10:30</p>
+                            </div>
+
+                            <div id="culte-status" class="mt-2 text-white fw-bold d-none">
+                                <i class="fas fa-circle text-success me-2 heartbeat" style="font-size: 10px;"></i> Culte en
+                                cours !
+                            </div>
+
+                            <div class="d-flex justify-content-start gap-2 gap-sm-3 mt-4" id="countdown-timer">
+                                <div class="countdown-box py-2 px-3">
+                                    <span class="countdown-value fs-2" id="cd-days">00</span>
+                                    <span class="countdown-label" style="font-size: 10px;">Jours</span>
+                                </div>
+                                <div class="countdown-box py-2 px-3">
+                                    <span class="countdown-value fs-2" id="cd-hours">00</span>
+                                    <span class="countdown-label" style="font-size: 10px;">Heures</span>
+                                </div>
+                                <div class="countdown-box py-2 px-3">
+                                    <span class="countdown-value fs-2" id="cd-minutes">00</span>
+                                    <span class="countdown-label" style="font-size: 10px;">Min</span>
+                                </div>
+                                <div class="countdown-box py-2 px-3">
+                                    <span class="countdown-value fs-2" id="cd-seconds">00</span>
+                                    <span class="countdown-label" style="font-size: 10px;">Sec</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image -->
+                    <div class="col-lg-6 p-0">
+                        <img src="images/Program.jpeg"
+                            alt="Visuel Prochain Événement" class="w-100 h-100 object-fit-cover" style="aspect-ratio: 4/5;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Desktop Tabs -->
+    <div class="tabs-container mt-5">
+        <div class="container">
+            <nav class="desktop-tabs" id="desktop-tabs">
+                <button class="tab-btn active" data-target="theme">Par Thème</button>
+                <button class="tab-btn" data-target="mois">Par Mois</button>
+                <button class="tab-btn" data-target="recents">Derniers Ajouts</button>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Tabs Select -->
+    <div class="mobile-tabs bg-brand-lightgrey p-3 border-bottom sticky-top" style="z-index: 40; top: 70px;">
+        <select id="mobile-tab-select" class="form-select text-uppercase tracking-wider font-heading fw-bold">
+            <option value="theme">Par Thème</option>
+            <option value="mois">Par Mois</option>
+            <option value="recents">Derniers Ajouts</option>
+        </select>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1 bg-white py-5">
+        <div class="container py-2">
+
+            <!-- ONGLET: PAR THÈME -->
+            <div id="theme" class="tab-content active">
+                <div class="text-center mb-5">
+                    <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter">Séries
+                        d'Enseignements</h2>
+                    <p class="text-secondary fw-light">Plongez dans nos playlists thématiques pour bâtir votre foi.</p>
+                </div>
+
+                <!-- Thème 1 -->
+                <div class="mb-5">
+                    <h4 class="font-heading text-brand-accent fw-bold border-bottom pb-2 mb-4"><i
+                            class="fas fa-fire me-2"></i> La Foi Vivante</h4>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="video-card" data-video="https://www.youtube.com/live/k5Z_g7gh7ao?si=6zAYzVRGhAM_JSF7">
+                                <!-- Remplacez l'URL par l'URL youtube réelle -->
+                                <div class="video-thumbnail-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                        alt="Thumbnail" class="video-thumbnail">
+                                    <i class="fas fa-play-circle play-icon"></i>
+                                    <span class="video-duration">1:12:05</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="badge bg-danger mb-2">La Foi</span>
+                                    <h5 class="fw-bold fs-6 text-dark mb-1">Activer le Pouvoir de la Foi</h5>
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <p class="text-secondary small mb-0"><i class="far fa-calendar-alt me-1"></i> 14 Juil. 2026</p>
+                                        <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); openNotes('Activer le Pouvoir de la Foi')" title="Lire le résumé">
+                                            <i class="fas fa-file-alt"></i> Notes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="video-card" data-video="https://www.youtube.com/live/k5Z_g7gh7ao?si=6zAYzVRGhAM_JSF7">
+                                <div class="video-thumbnail-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                        alt="Thumbnail" class="video-thumbnail">
+                                    <i class="fas fa-play-circle play-icon"></i>
+                                    <span class="video-duration">55:30</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="badge bg-danger mb-2">La Foi</span>
+                                    <h5 class="fw-bold fs-6 text-dark mb-1">Vaincre par la Parole</h5>
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <p class="text-secondary small mb-0"><i class="far fa-calendar-alt me-1"></i> 07 Juil. 2026</p>
+                                        <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); openNotes('Vaincre par la Parole')" title="Lire le résumé">
+                                            <i class="fas fa-file-alt"></i> Notes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thème 2 -->
+                <div class="mb-4">
+                    <h4 class="font-heading text-brand-accent fw-bold border-bottom pb-2 mb-4"><i
+                            class="fas fa-seedling me-2"></i> La Prospérité Divine</h4>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="video-card" data-video="https://www.youtube.com/live/k5Z_g7gh7ao?si=6zAYzVRGhAM_JSF7">
+                                <div class="video-thumbnail-wrapper">
+                                    <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                        alt="Thumbnail" class="video-thumbnail">
+                                    <i class="fas fa-play-circle play-icon"></i>
+                                    <span class="video-duration">1:04:15</span>
+                                </div>
+                                <div class="p-3">
+                                    <span class="badge bg-success mb-2">Prospérité</span>
+                                    <h5 class="fw-bold fs-6 text-dark mb-1">Les Lois de l'Abondance</h5>
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <p class="text-secondary small mb-0"><i class="far fa-calendar-alt me-1"></i> 28 Juin 2026</p>
+                                        <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); openNotes('Les Lois de l\'Abondance')" title="Lire le résumé">
+                                            <i class="fas fa-file-alt"></i> Notes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET: PAR MOIS -->
+            <div id="mois" class="tab-content">
+                <div class="text-center mb-5">
+                    <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter">Archives Mensuelles
+                    </h2>
+                    <p class="text-secondary fw-light">Retrouvez les messages selon leur mois de diffusion.</p>
+                </div>
+
+                <div class="accordion" id="accordionMois">
+                    <!-- Juillet -->
+                    <div class="accordion-item border-0 border-bottom mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button font-heading fw-bold fs-5 text-dark bg-light" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseJuillet">
+                                Juillet 2026
+                            </button>
+                        </h2>
+                        <div id="collapseJuillet" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionMois">
+                            <div class="accordion-body pt-4">
+                                <div class="row g-4">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="video-card" data-video="https://www.youtube.com/live/k5Z_g7gh7ao?si=6zAYzVRGhAM_JSF7">
+                                            <div class="video-thumbnail-wrapper">
+                                                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                                    alt="Thumbnail" class="video-thumbnail">
+                                                <i class="fas fa-play-circle play-icon"></i>
+                                                <span class="video-duration">1:12:05</span>
+                                            </div>
+                                            <div class="p-3">
+                                                <h5 class="fw-bold fs-6 text-dark mb-1">Activer le Pouvoir de la Foi</h5>
+                                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                                    <p class="text-secondary small mb-0"><i class="far fa-calendar-alt me-1"></i> 14 Juil. 2026</p>
+                                                    <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); openNotes('Activer le Pouvoir de la Foi')" title="Lire le résumé">
+                                                        <i class="fas fa-file-alt"></i> Notes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Juin -->
+                    <div class="accordion-item border-0 border-bottom mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed font-heading fw-bold fs-5 text-dark bg-light"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseJuin">
+                                Juin 2026
+                            </button>
+                        </h2>
+                        <div id="collapseJuin" class="accordion-collapse collapse" data-bs-parent="#accordionMois">
+                            <div class="accordion-body pt-4">
+                                <div class="row g-4">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="video-card" data-video="https://www.youtube.com/live/k5Z_g7gh7ao?si=6zAYzVRGhAM_JSF7">
+                                            <div class="video-thumbnail-wrapper">
+                                                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                                    alt="Thumbnail" class="video-thumbnail">
+                                                <i class="fas fa-play-circle play-icon"></i>
+                                                <span class="video-duration">1:04:15</span>
+                                            </div>
+                                            <div class="p-3">
+                                                <h5 class="fw-bold fs-6 text-dark mb-1">Les Lois de l'Abondance</h5>
+                                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                                    <p class="text-secondary small mb-0"><i class="far fa-calendar-alt me-1"></i> 28 Juin 2026</p>
+                                                    <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); openNotes('Les Lois de l\'Abondance')" title="Lire le résumé">
+                                                        <i class="fas fa-file-alt"></i> Notes
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONGLET: RECENTS -->
+            <div id="recents" class="tab-content">
+                <div class="text-center mb-5">
+                    <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter">Dernières Vidéos
+                    </h2>
+                    <p class="text-secondary fw-light">Les enseignements les plus récents de la semaine.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="video-card" data-video="https://www.youtube.com/live/k5Z_g7gh7ao?si=6zAYzVRGhAM_JSF7">
+                            <div class="video-thumbnail-wrapper">
+                                <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Thumbnail" class="video-thumbnail">
+                                <i class="fas fa-play-circle play-icon"></i>
+                                <span class="video-duration">1:12:05</span>
+                            </div>
+                            <div class="p-3">
+                                <span class="badge bg-danger mb-2">La Foi</span>
+                                <h5 class="fw-bold fs-6 text-dark mb-1">Activer le Pouvoir de la Foi</h5>
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <p class="text-secondary small mb-0"><i class="far fa-calendar-alt me-1"></i> 14 Juil. 2026</p>
+                                    <button class="btn btn-sm btn-outline-danger" onclick="event.stopPropagation(); openNotes('Activer le Pouvoir de la Foi')" title="Lire le résumé">
+                                        <i class="fas fa-file-alt"></i> Notes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FORMULAIRE (Témoignages, Prière, Visite) -->
+    <section class="contact-form-section py-5">
+        <div class="container py-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <span class="d-block text-brand-accent fw-bold tracking-widest text-uppercase mb-2 small">Restons
+                        Connectés</span>
+                    <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter mb-4">Partagez,
+                        Demandez, Connectez</h2>
+                    <p class="text-secondary fs-5 fw-light mb-4">
+                        Dieu agit puissamment à l'EFFV. Que vous ayez un témoignage à partager pour Sa gloire, un besoin
+                        urgent de prière, ou que vous souhaitiez planifier une visite pastorale, nous sommes à votre
+                        écoute.
+                    </p>
+                    <ul class="list-unstyled mb-5">
+                        <li class="d-flex align-items-center gap-3 mb-3">
+                            <div class="bg-white shadow-sm p-3 rounded-circle text-brand-accent"><i
+                                    class="fas fa-bullhorn"></i></div>
+                            <span class="fw-bold text-dark">Rendre un Témoignage</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3 mb-3">
+                            <div class="bg-white shadow-sm p-3 rounded-circle text-brand-accent"><i
+                                    class="fas fa-praying-hands"></i></div>
+                            <span class="fw-bold text-dark">Demander une Prière</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <div class="bg-white shadow-sm p-3 rounded-circle text-brand-accent"><i
+                                    class="fas fa-door-open"></i></div>
+                            <span class="fw-bold text-dark">Planifier une Visite</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-white p-4 p-md-5 rounded shadow-lg border-top border-brand-accent border-4">
+                        <h4 class="font-heading fw-bold mb-4">Envoyez votre requête</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">Nom Complet <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Votre nom"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">Téléphone / Email <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control bg-light border-0"
+                                        placeholder="Votre contact" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold text-secondary">Nature de la Requête <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select bg-light border-0" required>
+                                        <option value="" selected disabled>Sélectionnez une option...</option>
+                                        <option value="temoignage">Rendre un Témoignage</option>
+                                        <option value="priere">Demander une Prière</option>
+                                        <option value="visite">Planifier une Visite Pastorale</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label small fw-bold text-secondary">Votre Message <span
+                                            class="text-danger">*</span></label>
+                                    <textarea class="form-control bg-light border-0" rows="5"
+                                        placeholder="Détaillez votre témoignage ou votre requête ici..."
+                                        required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-brand w-100">Soumettre</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-5" style="border-top: 4px solid var(--brand-accent);">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-4 font-heading text-uppercase tracking-widest fw-bold"
+                style="font-size: 11px;">
+                <a href="index.html" class="text-white-50 text-decoration-none">Accueil</a>
+                <a href="apropos.html" class="text-white-50 text-decoration-none">À Propos</a>
+                <a href="mandat.html" class="text-white-50 text-decoration-none">Le Mandat</a>
+                <a href="mediatheque.html" class="text-white text-decoration-none">Médiathèque</a>
+                <a href="ibfpd.html" class="text-white-50 text-decoration-none">IBFPD</a>
+                <a href="famille_chretienne.html" class="text-white-50 text-decoration-none">Famille Chrétienne</a>
+                <a href="#" class="text-white-50 text-decoration-none">Téléchargements</a>
+            </div>
+
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="small text-white-50 text-uppercase tracking-wider" style="font-size: 11px;">
+                <p class="mb-1">&copy; 2026 Église du Festival de la Foi Vivante - Calavi Bidossessi, Bénin. Tous droits
+                    réservés.</p>
+                <p class="opacity-75 mb-0">Un ministère en lien avec la Living Faith Church Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- VIDEO MODAL -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 d-flex justify-content-end p-2">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9 bg-black rounded shadow-lg overflow-hidden">
+                        <iframe id="videoIframe" src=""
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTES MODAL -->
+    <div class="modal fade" id="notesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title font-heading fw-bold fs-4 text-brand-dark" id="notesModalTitle">Notes de l'enseignement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-3" id="notesModalBody">
+                    <!-- Content injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire un Don - Église du Festival de la Foi Vivante</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar Structure -->
+    <header class="navbar-custom">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'"
+                alt="Logo EFFV" height="65px" width="auto">
+            <div>
+                <span>ÉGLISE DU FESTIVAL</span><br>
+                <span>DE LA FOI VIVANTE</span>
+            </div>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À Propos</a>
+            <a href="mandat.html">Le Mandat</a>
+            <a href="mediatheque.html">Médiathèque</a>
+            <a href="ibfpd.html">IBFPD</a>
+            <a href="famille_chretienne.html">Famille Chrétienne</a>
+            <a href="telechargements.html">Téléchargements</a>
+            <a href="education.html">Éducation</a>
+            <a href="evenement.html">Événements</a>
+            <a href="don.html" class="donate nav-active">Faire un Don</a>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu">
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À Propos</a>
+            <a href="mandat.html">Le Mandat</a>
+            <a href="mediatheque.html">Médiathèque</a>
+            <a href="ibfpd.html">IBFPD</a>
+            <a href="famille_chretienne.html">Famille Chrétienne</a>
+            <a href="telechargements.html">Téléchargements</a>
+            <a href="education.html">Éducation</a>
+            <a href="evenement.html">Événements</a>
+            <a href="don.html" class="donate">Faire un Don</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-media" style="height: 50vh;">
+        <!-- Background elements -->
+        <img src="images/donation_hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'" alt="Générosité et Don" class="bg-img grayscale hover-grayscale-0 transition-all">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container text-white">
+            <span class="d-block text-brand-accent tracking-widest text-uppercase mb-3" style="font-size: 14px; font-weight: 600;">Soutenir l'Œuvre de Dieu</span>
+            <h1 class="font-heading tracking-tighter mb-3 text-uppercase" style="font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.1;">
+                S'associer à la <br/><span class="text-brand-accent">Bénédiction</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow-1 bg-white py-5">
+        <div class="container py-4">
+            
+            <div class="row align-items-center mb-5 pb-4">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <h2 class="display-6 font-heading fw-bold text-brand-dark text-uppercase tracking-tighter mb-4">La Puissance du Don</h2>
+                    <p class="fs-5 fw-light text-secondary mb-4 lh-base">
+                        À l'Église du Festival de la Foi Vivante, nous croyons que donner n'est pas une dette que nous payons, mais une semence que nous plantons. Vos dîmes, vos offrandes et vos sacrifices propulsent l'évangile, bâtissent la maison de Dieu et transforment des vies à Calavi et dans le monde entier.
+                    </p>
+                    <div class="bg-brand-lightgrey p-4 rounded-3 border-start border-4 border-brand-accent">
+                        <p class="fst-italic fs-5 text-dark mb-0 font-heading fw-bold">"Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte; car Dieu aime celui qui donne avec joie." <span class="d-block mt-2 small text-brand-accent tracking-widest text-uppercase">2 Corinthiens 9:7</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="d-inline-block p-4 border rounded-circle border-5 border-brand-lightgrey bg-white">
+                        <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'" alt="Logo EFFV" class="rounded-circle object-fit-contain shadow-lg" style="width: 250px; height: 250px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODES DE PAIEMENT -->
+            <div class="row g-4 mt-2">
+                <!-- ONLINE PAYMENT -->
+                <div class="col-lg-4">
+                    <div class="text-center p-5 border rounded-4 shadow-sm hover-shadow transition-all h-100 bg-white d-flex flex-column" style="border: 1px solid rgba(0,0,0,0.05) !important;">
+                        <div class="icon-circle mx-auto mb-4 bg-brand-lightgrey text-brand-accent d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px; font-size: 2.5rem;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4 class="font-heading fw-bold text-uppercase fs-5 mb-3">En Ligne / Mobile Money</h4>
+                        <p class="text-secondary small mb-4 lh-lg flex-grow-1">Faites votre don instantanément de manière sécurisée via Mobile Money (MTN, Moov) ou Carte Bancaire (Visa, Mastercard).</p>
+                        <button class="btn btn-brand w-100 py-3 fw-bold text-uppercase tracking-wider rounded-3 shadow-sm" style="background-color: var(--brand-accent); color: white; border: none;" data-bs-toggle="modal" data-bs-target="#donModal">
+                            Faire un don en ligne
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- BANK TRANSFER -->
+                <div class="col-lg-4">
+                    <div class="text-center p-5 border rounded-4 shadow-sm hover-shadow transition-all h-100 bg-white d-flex flex-column" style="border: 1px solid rgba(0,0,0,0.05) !important;">
+                        <div class="icon-circle mx-auto mb-4 bg-brand-lightgrey text-brand-accent d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px; font-size: 2.5rem;">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4 class="font-heading fw-bold text-uppercase fs-5 mb-3">Virement Bancaire</h4>
+                        <p class="text-secondary small mb-4 lh-lg flex-grow-1">Transférez directement vos dîmes et offrandes sur le compte officiel de l'église. Indiquez le motif du don (Dîme, Offrande, Projet).</p>
+                        <button class="btn btn-outline-dark w-100 py-3 fw-bold text-uppercase tracking-wider rounded-3" data-bs-toggle="collapse" data-bs-target="#bankDetails">
+                            Afficher le RIB
+                        </button>
+                    </div>
+                </div>
+
+                <!-- EN PRESENTIEL -->
+                <div class="col-lg-4">
+                    <div class="text-center p-5 border rounded-4 shadow-sm hover-shadow transition-all h-100 bg-white d-flex flex-column" style="border: 1px solid rgba(0,0,0,0.05) !important;">
+                        <div class="icon-circle mx-auto mb-4 bg-brand-lightgrey text-brand-accent d-flex align-items-center justify-content-center rounded-circle" style="width: 80px; height: 80px; font-size: 2.5rem;">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4 class="font-heading fw-bold text-uppercase fs-5 mb-3">En Présentiel</h4>
+                        <p class="text-secondary small mb-4 lh-lg flex-grow-1">Vous pouvez apporter vos dons physiques dans nos corbeilles lors des différents cultes (dimanches, mercredis, jeudis) au siège.</p>
+                        <a href="apropos.html#programme" class="btn btn-outline-secondary w-100 py-3 fw-bold text-uppercase tracking-wider rounded-3">
+                            Voir le Programme
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collapse Bank Details -->
+            <div class="collapse mt-4" id="bankDetails">
+                <div class="card card-body bg-light border-0 rounded-4 p-4 p-md-5">
+                    <h5 class="font-heading fw-bold mb-4 text-center border-bottom pb-3"><i class="fas fa-file-invoice-dollar text-brand-accent me-2"></i> Coordonnées Bancaires (RIB)</h5>
+                    <div class="row text-center">
+                        <div class="col-md-6 mb-3">
+                            <span class="d-block text-secondary small fw-bold text-uppercase tracking-widest mb-1">Nom du Compte</span>
+                            <span class="fs-5 fw-bold text-dark">EFFV - CULTE</span>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <span class="d-block text-secondary small fw-bold text-uppercase tracking-widest mb-1">Banque</span>
+                            <span class="fs-5 fw-bold text-dark">ECOBANK BENIN</span>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <span class="d-block text-secondary small fw-bold text-uppercase tracking-widest mb-1">IBAN</span>
+                            <span class="fs-3 fw-black text-brand-accent font-monospace bg-white px-3 py-2 border rounded shadow-sm">BJ06 1234 5678 9012 3456 78</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL DE DON EN LIGNE -->
+    <div class="modal fade" id="donModal" tabindex="-1" aria-labelledby="donModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
+                <div class="modal-header bg-brand-dark text-white border-0 p-4">
+                    <div>
+                        <h5 class="modal-title font-heading fw-bold fs-3" id="donModalLabel">Faire un Don Sécurisé</h5>
+                        <p class="mb-0 text-white-50 small">Sélectionnez le type et le montant de votre don</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light p-4">
+                    <form id="donationForm" onsubmit="event.preventDefault(); alert('Redirection vers FedaPay/Stripe en cours...');">
+                        
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-brand-dark">Motif du Don</label>
+                            <select class="form-select border-2" required>
+                                <option value="offrande">Offrande Libre</option>
+                                <option value="dime">Dîme</option>
+                                <option value="projet">Projet de Construction</option>
+                                <option value="action_grace">Action de Grâce</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold text-brand-dark">Montant (FCFA)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-2 fw-bold text-brand-accent">CFA</span>
+                                <input type="number" class="form-control border-2 fs-5 fw-bold" placeholder="Ex: 5000" min="500" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <label class="form-label fw-bold text-brand-dark">Nom Complet (Optionnel)</label>
+                                <input type="text" class="form-control border-2" placeholder="Ex: Jean Dupont">
+                            </div>
+                        </div>
+
+                        <div class="alert alert-success small d-flex align-items-center mb-4 border-0 shadow-sm">
+                            <i class="fas fa-lock fs-4 me-3 text-success"></i>
+                            <div>
+                                Votre paiement sera traité de manière 100% sécurisée par nos partenaires agréés (Mobile Money / Carte Bancaire).
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn w-100 py-3 fs-5 fw-bold text-uppercase tracking-wider rounded-3" style="background-color: var(--brand-dark); color: white;">
+                            Procéder au Paiement <i class="fas fa-chevron-right ms-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-5" style="border-top: 4px solid var(--brand-accent);">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-4 font-heading text-uppercase tracking-widest fw-bold" style="font-size: 11px;">
+                <a href="index.html" class="text-white-50 text-decoration-none">Accueil</a>
+                <a href="apropos.html" class="text-white-50 text-decoration-none">À Propos</a>
+                <a href="mandat.html" class="text-white-50 text-decoration-none">Le Mandat</a>
+                <a href="mediatheque.html" class="text-white-50 text-decoration-none">Médiathèque</a>
+                <a href="ibfpd.html" class="text-white-50 text-decoration-none">IBFPD</a>
+                <a href="famille_chretienne.html" class="text-white-50 text-decoration-none">Famille Chrétienne</a>
+                <a href="telechargements.html" class="text-white-50 text-decoration-none">Téléchargements</a>
+                <a href="education.html" class="text-white-50 text-decoration-none">Éducation</a>
+                <a href="evenement.html" class="text-white-50 text-decoration-none">Événements</a>
+            </div>
+            
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="small text-white-50 text-uppercase tracking-wider" style="font-size: 11px;">
+                <p class="mb-1">&copy; 2026 Église du Festival de la Foi Vivante - Calavi Bidossessi, Bénin. Tous droits réservés.</p>
+                <p class="opacity-75 mb-0">Un ministère en lien avec la Living Faith Church Worldwide</p>
+                <p class="mt-3"><i class="fas fa-envelope me-2"></i> contact@effv.org &nbsp;|&nbsp; <i class="fas fa-phone me-2"></i> +229 00 00 00 00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

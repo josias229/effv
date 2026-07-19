@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Événements | Église du Festival de la Foi Vivante</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HERO & NAVBAR -->
+    <section class="hero-media">
+        <!-- Background elements -->
+        <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            alt="Événements" class="bg-img">
+        <div class="hero-overlay"></div>
+
+        <!-- Navbar Structure -->
+        <header class="navbar-custom">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'"
+                    alt="Logo EFFV" height="65px" width="auto">
+                <div>
+                    <span>ÉGLISE DU FESTIVAL</span><br>
+                    <span>DE LA FOI VIVANTE</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événements</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À Propos</a>
+            <a href="mandat.html">Le Mandat</a>
+            <a href="mediatheque.html">Médiathèque</a>
+            <a href="ibfpd.html">IBFPD</a>
+            <a href="famille_chretienne.html">Famille Chrétienne</a>
+            <a href="telechargements.html">Téléchargements</a>
+            <a href="education.html">Éducation</a>
+            <a href="evenement.html">Événements</a>
+            <a href="don.html" class="donate">Faire un Don</a>
+        </div>
+
+        <div class="hero-content container text-center">
+            <span class="badge bg-brand-accent text-white mb-3 px-3 py-2 fw-bold tracking-widest text-uppercase"
+                style="font-size: 14px;">Inscriptions Ouvertes</span>
+            <h1 class="font-heading tracking-tighter mb-4 text-uppercase text-white"
+                style="font-size: clamp(2rem, 4vw, 4rem); font-weight: 900; line-height: 1.1;">
+                Nos Événements <span class="text-brand-accent">Spéciaux</span>
+            </h1>
+            <p class="lead mx-auto text-light" style="max-width: 700px; font-weight: 300;">
+                Réservez vos places et vos pass pour nos prochaines conférences, retraites spirituelles et rassemblements d'impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- ÉVÉNEMENTS SECTION (HORIZONTAL) -->
+    <section class="py-5 bg-brand-lightgrey">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Evénement 1 -->
+                    <div class="event-card-h mb-5">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="event-img-wrapper">
+                                    <span class="event-badge-new text-brand-accent"><i class="fas fa-ticket-alt me-1"></i> Places Limitées</span>
+                                    <img src="images/Evenement_1.jpg" alt="Conférence" class="event-img">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="event-body-h">
+                                    <h3 class="event-title-h">Conquerir de nouveaux territoires"</h3>
+                                    
+                                    <div class="event-meta-h">
+                                        <span><i class="far fa-calendar-alt"></i> 15 Août 2026</span>
+                                        <span><i class="far fa-clock"></i> 09h00 - 16h00</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Songhai Porto-Novo</span>
+                                    </div>
+                                    
+                                    <p class="event-desc-h">
+                                        Un séminaire intensif destiné aux entrepreneurs chrétiens et porteurs de projets. Découvrez les clés bibliques de la prospérité financière et du succès en affaires. Inclus : Déjeuner et supports de formation.
+                                    </p>
+                                    
+                                    <div class="event-footer-h">
+                                        <div class="event-price-h">10 000 FCFA</div>
+                                        <button class="btn btn-outline-dark fw-bold text-uppercase tracking-wider px-4 py-2 rounded-3" onclick="openModal('Conférence: Entreprendre avec Dieu', '10 000 FCFA')">
+                                            S'inscrire
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evénement 2 -->
+                    <div class="event-card-h mb-5">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="event-img-wrapper">
+                                    <span class="event-badge-new bg-dark text-white"><i class="fas fa-plane-departure me-1"></i> Voyage Spirituel</span>
+                                    <img src="images/shiloh2026.jpg" alt="SHILO" class="event-img">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="event-body-h">
+                                    <h3 class="event-title-h">Voyage pour "SHILO 2026"</h3>
+                                    
+                                    <div class="event-meta-h">
+                                        <span><i class="far fa-calendar-alt"></i> 08 - 14 Déc. 2026</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Canaanland, Ota (Nigeria)</span>
+                                    </div>
+                                    
+                                    <p class="event-desc-h">
+                                        Rejoignez la délégation de l'EFFV pour le grand rassemblement annuel SHILO à la Winners' Chapel. Ce pass couvre le transport (Aller/Retour) et la logistique de base. Préparez-vous pour une rencontre divine !
+                                    </p>
+                                    
+                                    <div class="event-footer-h">
+                                        <div class="event-price-h">45 000 FCFA</div>
+                                        <button class="btn btn-outline-dark fw-bold text-uppercase tracking-wider px-4 py-2 rounded-3" onclick="openModal('Voyage Spirituel : SHILO 2026', '45 000 FCFA')">
+                                            Réserver
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evénement 3 -->
+                    <div class="event-card-h">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-5">
+                                <div class="event-img-wrapper">
+                                    <span class="event-badge-new bg-success text-white"><i class="fas fa-gift me-1"></i> Entrée Libre</span>
+                                    <img src="images/Evenement_3.jpg" alt="Retraite" class="event-img">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="event-body-h">
+                                    <h3 class="event-title-h">Amour Sans Tabou</h3>
+                                    
+                                    <div class="event-meta-h">
+                                        <span><i class="far fa-calendar-alt"></i> 25 - 27 Sept. 2026</span>
+                                        <span><i class="fas fa-map-marker-alt"></i> Centre de Retraite, Pahou</span>
+                                    </div>
+                                    
+                                    <p class="event-desc-h">
+                                        Un programme spécial axé sur la jeunesse et la vie affective. Des discussions ouvertes sur la sexualité, le mariage, la foi et comment vivre sa jeunesse selon les principes bibliques.
+                                    </p>
+                                    
+                                    <div class="event-footer-h">
+                                        <div class="event-price-h text-success">Gratuit</div>
+                                        <button class="btn btn-danger fw-bold text-uppercase tracking-wider px-4 py-2 rounded-3" onclick="openModal('Retraite de la Jeunesse', 'Gratuit')">
+                                            S'inscrire
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL D'INSCRIPTION & PAIEMENT -->
+    <div class="modal fade" id="inscriptionModal" tabindex="-1" aria-labelledby="inscriptionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title font-heading fw-bold fs-3" id="inscriptionModalLabel">Inscription à l'Événement</h5>
+                        <p class="mb-0 text-white-50 small" id="modalEventTitle">Sélectionnez votre événement</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    
+                    <form id="eventForm" onsubmit="handleRegistration(event)">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-brand-dark">Nom complet *</label>
+                                <input type="text" class="form-control" required placeholder="Ex: Jean Dupont">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-brand-dark">Numéro WhatsApp *</label>
+                                <input type="tel" class="form-control" required placeholder="+229 00 00 00 00">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-brand-dark">Adresse E-mail</label>
+                                <input type="email" class="form-control" placeholder="jean@example.com">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold text-brand-dark">Nombre de places *</label>
+                                <select class="form-select" id="ticketCount" required onchange="updateTotal()">
+                                    <option value="1" selected>1 Place</option>
+                                    <option value="2">2 Places</option>
+                                    <option value="3">3 Places</option>
+                                    <option value="4">4 Places</option>
+                                    <option value="5">5 Places</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Récapitulatif Paiement -->
+                        <div class="mt-4 p-4 rounded-3 border border-brand-accent bg-white shadow-sm" id="paymentBox">
+                            <h5 class="font-heading fw-bold mb-3"><i class="fas fa-credit-card me-2 text-brand-accent"></i>Récapitulatif & Paiement</h5>
+                            
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-secondary">Événement :</span>
+                                <span class="fw-bold text-end" id="recapEventName">-</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                                <span class="text-secondary">Tarif unitaire :</span>
+                                <span class="fw-bold" id="recapUnitPrice">0 FCFA</span>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="fs-5 fw-bold text-brand-dark">Total à payer :</span>
+                                <span class="fs-4 fw-black text-brand-accent" id="recapTotal">0 FCFA</span>
+                            </div>
+
+                            <div class="alert alert-info small d-flex align-items-center mb-4">
+                                <i class="fas fa-info-circle fs-4 me-3"></i>
+                                <div>
+                                    Vous serez redirigé vers notre plateforme sécurisée (FedaPay/Mobile Money) pour finaliser le paiement et recevoir votre E-Pass.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-brand w-100 py-3 fs-5 fw-bold text-uppercase tracking-wider rounded-3" style="background-color: var(--brand-dark); color: white;">
+                                Payer & S'inscrire <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-5" style="border-top: 4px solid var(--brand-accent);">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-4 font-heading text-uppercase tracking-widest fw-bold"
+                style="font-size: 11px;">
+                <a href="index.html" class="text-white-50 text-decoration-none">Accueil</a>
+                <a href="apropos.html" class="text-white-50 text-decoration-none">À Propos</a>
+                <a href="mandat.html" class="text-white-50 text-decoration-none">Le Mandat</a>
+                <a href="mediatheque.html" class="text-white-50 text-decoration-none">Médiathèque</a>
+                <a href="ibfpd.html" class="text-white-50 text-decoration-none">IBFPD</a>
+                <a href="famille_chretienne.html" class="text-white-50 text-decoration-none">Famille Chrétienne</a>
+                <a href="telechargements.html" class="text-white-50 text-decoration-none">Téléchargements</a>
+                <a href="education.html" class="text-white-50 text-decoration-none">Éducation</a>
+                <a href="evenement.html" class="text-white text-decoration-none">Événement</a>
+            </div>
+
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="small text-white-50 text-uppercase tracking-wider" style="font-size: 11px;">
+                <p class="mb-1">&copy; 2026 Église du Festival de la Foi Vivante - Calavi Bidossessi, Bénin. Tous droits réservés.</p>
+                <p class="opacity-75 mb-0">Un ministère en lien avec la Living Faith Church Worldwide</p>
+                <p class="mt-3"><i class="fas fa-envelope me-2"></i> contact@effv.org &nbsp;|&nbsp; <i class="fas fa-phone me-2"></i> +229 00 00 00 00</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

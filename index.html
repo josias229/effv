@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel Hero - Église du Festival de la Foi Vivante</title>
+    <!-- Bootstrap pour les fonctionnalités responsive seulement -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+    <!-- Polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="carousel">
+            <!-- Slide 1: Principal -->
+            <div class="slide active" style="background-image:url('images/Pasteur_Image0.jpg')">
+                <div class="slide-content">
+                    <span class="badge bg-brand-accent">2026</span>
+                    <h1 style="font-size: clamp(2rem, 5vw, 4rem); line-height: 1.2;">Année d'abondance de grâce et de don de justice pour un règne surnaturel</h1>
+                    <p style="font-size: 18px; font-weight: bold; margin-bottom: 5px; color: var(--brand-accent);">Romains 5:17</p>
+                    <p style="font-size: 16px; font-style: italic; max-width: 800px; margin: 0 auto;">"Si par l'offense d'un seul la mort a régné par lui seul, à plus forte raison ceux qui reçoivent l'abondance de la grâce et du don de la justice régneront-ils dans la vie par Jésus-Christ lui seul."</p>
+                </div>
+            </div>
+            <!-- Slide 2: Bienvenue -->
+            <div class="slide" style="background-image:url('images/Pasteur_Image5.jpg')">
+                <div class="slide-content">
+                    <span class="badge">BIENVENUE</span>
+                    <h1>Une Foi Vivante</h1>
+                    <p>Rejoignez une communauté passionnée où la parole de Dieu transforme les vies au quotidien.</p>
+                </div>
+            </div>
+            <!-- Slide 3: Adoration -->
+            <div class="slide" style="background-image:url('images/Pasteur_Image3.jpg')">
+                <div class="slide-content">
+                    <span class="badge">ADORATION</span>
+                    <h1>Célébrer sa Gloire</h1>
+                    <p>Vivez des moments de louange intenses et connectez-vous véritablement avec le Saint-Esprit.</p>
+                </div>
+            </div>
+            <!-- Slide 4: Éducation -->
+            <div class="slide" style="background-image:url('images/Pasteur_Image4.jpg')">
+                <div class="slide-content">
+                    <span class="badge">ÉDUCATION</span>
+                    <h1>Grandir Ensemble</h1>
+                    <p>Découvrez des enseignements profonds pour bâtir une fondation spirituelle inébranlable.</p>
+                </div>
+            </div>
+            <!-- Slide 5: Famille Chrétienne -->
+            <div class="slide" style="background-image:url('images/Pasteur_Image2.jpg')">
+                <div class="slide-content">
+                    <span class="badge">FAMILLE CHRÉTIENNE</span>
+                    <h1>Un Foyer d'Amour</h1>
+                    <p>Un espace bienveillant où chaque famille est fortifiée et bénie par la grâce divine.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <!-- Navbar Structure -->
+        <header class="navbar-custom">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'"
+                    alt="Logo EFFV" height="65px" width="auto">
+                <div>
+                    <span>ÉGLISE DU FESTIVAL</span><br>
+                    <span>DE LA FOI VIVANTE</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événements</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À Propos</a>
+            <a href="mandat.html">Le Mandat</a>
+            <a href="mediatheque.html">Médiathèque</a>
+            <a href="ibfpd.html">IBFPD</a>
+            <a href="famille_chretienne.html">Famille Chrétienne</a>
+            <a href="telechargements.html">Téléchargements</a>
+            <a href="education.html">Éducation</a>
+            <a href="evenement.html">Événements</a>
+            <a href="don.html" class="donate">Faire un Don</a>
+        </div>
+
+
+        
+        <!-- CTA en bas comme dans la version originale - Maintenant en français -->
+        <div class="hero-cta">
+            <button class="btn red">Demande de Prière</button>
+            <button class="btn red">Planifier une Visite</button>
+        </div>
+
+        <!-- Flèches de navigation -->
+        <button class="nav prev">&#10094;</button>
+        <button class="nav next">&#10095;</button>
+    </section>
+
+</body>
+</html>

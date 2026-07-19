@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librairie Chrétienne | Église du Festival de la Foi Vivante</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HERO & NAVBAR -->
+    <section class="hero-media">
+        <!-- Background elements -->
+        <img src="images/bannerEducation.jpeg"
+            alt="Librairie Chrétienne" class="bg-img">
+        <div class="hero-overlay"></div>
+
+        <!-- Navbar Structure -->
+        <header class="navbar-custom">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/EFFV_logo.png" onerror="this.src='https://placehold.co/65x65/1a472a/FFF?text=EFFV'"
+                    alt="Logo EFFV" height="65px" width="auto">
+                <div>
+                    <span>ÉGLISE DU FESTIVAL</span><br>
+                    <span>DE LA FOI VIVANTE</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="apropos.html">À Propos</a>
+                <a href="mandat.html">Le Mandat</a>
+                <a href="mediatheque.html">Médiathèque</a>
+                <a href="ibfpd.html">IBFPD</a>
+                <a href="famille_chretienne.html">Famille Chrétienne</a>
+                <a href="telechargements.html">Téléchargements</a>
+                <a href="education.html">Éducation</a>
+                <a href="evenement.html">Événements</a>
+                <a href="don.html" class="donate">Faire un Don</a>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu">
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À Propos</a>
+            <a href="mandat.html">Le Mandat</a>
+            <a href="mediatheque.html">Médiathèque</a>
+            <a href="ibfpd.html">IBFPD</a>
+            <a href="famille_chretienne.html">Famille Chrétienne</a>
+            <a href="telechargements.html">Téléchargements</a>
+            <a href="education.html">Éducation</a>
+            <a href="evenement.html">Événements</a>
+            <a href="don.html" class="donate">Faire un Don</a>
+        </div>
+
+        <div class="hero-content container text-center">
+            <span class="badge bg-brand-accent text-white mb-3 px-3 py-2 fw-bold tracking-widest text-uppercase"
+                style="font-size: 14px;">Boutique Officielle</span>
+            <h1 class="font-heading tracking-tighter mb-4 text-uppercase text-white"
+                style="font-size: clamp(2rem, 4vw, 4rem); font-weight: 900; line-height: 1.1;">
+                Librairie <span class="text-brand-accent">Chrétienne</span>
+            </h1>
+            <p class="lead mx-auto text-light" style="max-width: 700px; font-weight: 300;">
+                Découvrez les ouvrages inspirés de nos pasteurs pour nourrir votre foi, renouveler votre intelligence et équiper votre esprit.
+            </p>
+        </div>
+    </section>
+
+    <!-- LIBRAIRIE SECTION -->
+    <section class="py-5 bg-brand-lightgrey">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="font-heading fw-bold text-brand-dark text-uppercase tracking-tighter fs-1">Nos Derniers <span class="text-brand-accent">Ouvrages</span></h2>
+                <p class="text-secondary fw-light mx-auto" style="max-width: 700px;">
+                    Commandez la version physique de nos livres pour votre bibliothèque ou téléchargez instantanément la version E-book.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                
+                <!-- Livre 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="book-card">
+                        <div class="book-cover-wrapper">
+                            <span class="book-tag tag-physique"><i class="fas fa-book me-1"></i> Livre Physique</span>
+                            <!-- Placeholder pour la couverture du livre -->
+                            <img src="images/livre1.jpg" alt="Couverture Livre" class="book-cover">
+                        </div>
+                        <div class="book-info text-center">
+                            <h4 class="book-title">La Puissance de la Vision</h4>
+                            <p class="book-author">Par Rev BOKE ATA </p>
+                             <p>EFFV</p>
+                            <div class="book-price">5 000 FCFA</div>
+                            
+                            <button class="btn btn-outline-dark btn-buy w-100" onclick="alert('Redirection vers FedaPay/Stripe à venir...')">
+                                <i class="fas fa-shopping-cart me-2"></i> Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Livre 2 (Ebook) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="book-card">
+                        <div class="book-cover-wrapper">
+                            <span class="book-tag tag-ebook"><i class="fas fa-tablet-alt me-1"></i> E-Book (PDF)</span>
+                            <img src="images/livre2.webp" alt="Couverture Livre" class="book-cover">
+                        </div>
+                        <div class="book-info text-center">
+                            <h4 class="book-title">Comme une brebis au milieu des loups</h4>
+                            <p class="book-author">Par Cristian NANI</p>
+                            
+                            <div class="book-price">3 000 FCFA</div>
+                            
+                            <button class="btn btn-danger btn-buy w-100" onclick="alert('Redirection vers FedaPay/Stripe à venir...')">
+                                <i class="fas fa-shopping-cart me-2"></i> Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Livre 3 -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="book-card">
+                        <div class="book-cover-wrapper">
+                            <span class="book-tag tag-physique"><i class="fas fa-book me-1"></i> Livre Physique</span>
+                            <img src="images/livre3.jpg" alt="Couverture Livre" class="book-cover">
+                        </div>
+                        <div class="book-info text-center">
+                            <h4 class="book-title">Domine ton monde</h4>
+                            <p class="book-author">Par Bishop David Oyedepo</p>
+                            
+                            <div class="book-price">6 500 FCFA</div>
+                            
+                            <button class="btn btn-outline-dark btn-buy w-100" onclick="alert('Redirection vers FedaPay/Stripe à venir...')">
+                                <i class="fas fa-shopping-cart me-2"></i> Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Livre 4 (Ebook) -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="book-card">
+                        <div class="book-cover-wrapper">
+                            <span class="book-tag tag-ebook"><i class="fas fa-tablet-alt me-1"></i> E-Book (PDF)</span>
+                            <img src="images/livre4.jpg" alt="Couverture Livre" class="book-cover">
+                        </div>
+                        <div class="book-info text-center">
+                            <h4 class="book-title">La Prière Gagnante</h4>
+                            <p class="book-author">Par Pasteur David Oyedepo</p>
+                            
+                            <div class="book-price">2 500 FCFA</div>
+                            
+                            <button class="btn btn-danger btn-buy w-100" onclick="alert('Redirection vers FedaPay/Stripe à venir...')">
+                                <i class="fas fa-shopping-cart me-2"></i> Acheter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="text-secondary small fst-italic">Les paiements seront traités de manière sécurisée. La livraison des livres physiques s'effectue sous 48h (Cotonou & Environs).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-5" style="border-top: 4px solid var(--brand-accent);">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-4 font-heading text-uppercase tracking-widest fw-bold"
+                style="font-size: 11px;">
+                <a href="index.html" class="text-white-50 text-decoration-none">Accueil</a>
+                <a href="apropos.html" class="text-white-50 text-decoration-none">À Propos</a>
+                <a href="mandat.html" class="text-white-50 text-decoration-none">Le Mandat</a>
+                <a href="mediatheque.html" class="text-white-50 text-decoration-none">Médiathèque</a>
+                <a href="ibfpd.html" class="text-white-50 text-decoration-none">IBFPD</a>
+                <a href="famille_chretienne.html" class="text-white-50 text-decoration-none">Famille Chrétienne</a>
+                <a href="telechargements.html" class="text-white-50 text-decoration-none">Téléchargements</a>
+                <a href="education.html" class="text-white text-decoration-none">Éducation</a>
+                <a href="#" class="text-white-50 text-decoration-none">Nous Contacter</a>
+            </div>
+
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white-50 text-decoration-none fs-5"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="small text-white-50 text-uppercase tracking-wider" style="font-size: 11px;">
+                <p class="mb-1">&copy; 2026 Église du Festival de la Foi Vivante - Calavi Bidossessi, Bénin. Tous droits réservés.</p>
+                <p class="opacity-75 mb-0">Un ministère en lien avec la Living Faith Church Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>

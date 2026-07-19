@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Site Web Gestuel</title>
+<style>
+  body {
+    margin: 0;
+    background: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  #video {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 180px;
+    opacity: 0.7;
+    border-radius: 10px;
+    transform: scaleX(-1); /* Miroir pour naturel */
+  }
+  #app {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 1.5rem;
+  }
+  .page {
+    display: none;
+  }
+  .page.active {
+    display: block;
+  }
+  h1 {
+    color: #38bdf8;
+  }
+  #hint {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  .gesture-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+
+<video id="video" autoplay playsinline></video>
+
+<div id="app">
+  <div class="page active" id="home">
+    <h1>Accueil</h1>
+    <p>Swipe gauche ← Services</p>
+    <p>👈 Main vers la gauche</p>
+  </div>
+
+  <div class="page" id="services">
+    <h1>Services</h1>
+    <p>Swipe droite → Accueil</p>
+    <p>Swipe gauche ← À propos</p>
+    <p>👉👈 Déplace ton index horizontalement</p>
+  </div>
+
+  <div class="page" id="about">
+    <h1>À propos</h1>
+    <p>Swipe droite → Services</p>
+    <p>👉 Main vers la droite</p>
+  </div>
+</div>
+
+<div id="hint">
+  👉 Déplace ton index de gauche à droite pour naviguer
+</div>
+
+<div class="gesture-indicator" id="gestureStatus">
+  Statut: Attente geste...
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+<script>
+/* =======================
+   GESTION DES PAGES
+======================= */
+
+const pages = ["home", "services", "about"];
+let currentPage = 0;
+
+function showPage(index) {
+  if (index < 0 || index >= pages.length) return;
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(pages[index]).classList.add("active");
+  currentPage = index;
+  updateHint();
+}
+
+function updateHint() {
+  const status = document.getElementById('gestureStatus');
+  status.textContent = `Page: ${pages[currentPage]} (${currentPage + 1}/${pages.length})`;
+}
+
+showPage(currentPage);
+
+/* =======================
+   ACCÈS WEBCAM
+======================= */
+
+const video = document.getElementById("video");
+navigator.mediaDevices.getUserMedia({ 
+  video: { 
+    facingMode: "user",
+    width: { ideal: 640 },
+    height: { ideal: 480 }
+  } 
+})
+.then(stream => {
+  video.srcObject = stream;
+  video.onloadedmetadata = () => {
+    console.log("Webcam prête, dimensions:", video.videoWidth, "x", video.videoHeight);
+  };
+})
+.catch(err => {
+  console.error("Erreur webcam:", err);
+  alert("Veuillez autoriser l'accès à la webcam pour utiliser les gestes.");
+});
+
+/* =======================
+   MEDIAPIPE HANDS
+======================= */
+
+const hands = new Hands({
+  locateFile: file => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+});
+
+hands.setOptions({
+  maxNumHands: 1,
+  modelComplexity: 1,
+  minDetectionConfidence: 0.6,
+  minTrackingConfidence: 0.6
+});
+
+/* =======================
+   LOGIQUE DE SWIPE CORRIGÉE
+======================= */
+
+let lastX = null;
+let lastTime = 0;
+const SWIPE_THRESHOLD = 0.08; // Seuil réduit pour plus de sensibilité
+const TIME_THRESHOLD = 500; // ms entre les mesures
+
+hands.onResults = (results) => {
+  if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+    const hand = results.multiHandLandmarks[0];
+    const indexTip = hand[8]; // Bout de l'index
+    const wrist = hand[0]; // Poignet pour référence
+    const now = Date.now();
+    
+    // Vérifier que l'index est levé (au-dessus du poignet)
+    const indexRaised = indexTip.y < wrist.y - 0.05;
+    
+    if (indexRaised) {
+      const currentX = indexTip.x;
+      
+      if (lastX !== null && (now - lastTime) < TIME_THRESHOLD) {
+        const deltaX = currentX - lastX;
+        
+        // SWIPE VERS LA GAUCHE (main se déplace vers la droite à l'écran)
+        if (deltaX < -SWIPE_THRESHOLD) {
+          console.log(`Swipe gauche détecté! deltaX: ${deltaX.toFixed(3)}`);
+          if (currentPage < pages.length - 1) {
+            currentPage++;
+            showPage(currentPage);
+          }
+          lastX = null; // Réinitialiser après détection
+          return;
+        }
+        // SWIPE VERS LA DROITE (main se déplace vers la gauche à l'écran)
+        else if (deltaX > SWIPE_THRESHOLD) {
+          console.log(`Swipe droite détecté! deltaX: ${deltaX.toFixed(3)}`);
+          if (currentPage > 0) {
+            currentPage--;
+            showPage(currentPage);
+          }
+          lastX = null; // Réinitialiser après détection
+          return;
+        }
+      }
+      
+      // Mettre à jour la position de référence
+      lastX = currentX;
+      lastTime = now;
+    } else {
+      // Réinitialiser si l'index n'est pas levé
+      lastX = null;
+    }
+    
+    // Afficher le point de l'index pour debug (optionnel)
+    // debugDot(indexTip.x, indexTip.y);
+  } else {
+    lastX = null; // Pas de main détectée
+  }
+};
+
+/* =======================
+   FONCTION DEBUG (optionnel)
+======================= */
+
+function debugDot(x, y) {
+  let dot = document.getElementById('debugDot');
+  if (!dot) {
+    dot = document.createElement('div');
+    dot.id = 'debugDot';
+    dot.style.cssText = `
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+    `;
+    document.body.appendChild(dot);
+  }
+  dot.style.left = `${x * window.innerWidth}px`;
+  dot.style.top = `${y * window.innerHeight}px`;
+}
+
+/* =======================
+   LIAISON CAMÉRA → HANDS
+======================= */
+
+let cameraMP;
+
+// Démarrer MediaPipe avec un léger délai pour laisser la webcam s'initialiser
+setTimeout(() => {
+  if (!video.videoWidth) {
+    console.warn("La vidéo n'est pas encore prête, réessayant...");
+    setTimeout(initMediaPipe, 500);
+    return;
+  }
+  
+  initMediaPipe();
+}, 1000);
+
+function initMediaPipe() {
+  try {
+    cameraMP = new Camera(video, {
+      onFrame: async () => {
+        if (hands && video.videoWidth > 0) {
+          try {
+            await hands.send({ image: video });
+          } catch (e) {
+            console.error("Erreur lors de l'envoi à MediaPipe:", e);
+          }
+        }
+      },
+      width: 640,
+      height: 480
+    });
+    
+    cameraMP.start();
+    console.log("MediaPipe Hands initialisé avec succès!");
+  } catch (error) {
+    console.error("Erreur initialisation MediaPipe:", error);
+    document.getElementById('hint').innerHTML = 
+      "❌ Erreur MediaPipe. Rechargez la page.<br>Message: " + error.message;
+  }
+}
+
+/* =======================
+   NAVIGATION CLAVIER POUR TEST
+======================= */
+
+document.addEventListener('keydown', (e) => {
+  switch(e.key) {
+    case 'ArrowRight':
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        showPage(currentPage);
+      }
+      break;
+    case 'ArrowLeft':
+      if (currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
+      }
+      break;
+    case '1': showPage(0); break;
+    case '2': showPage(1); break;
+    case '3': showPage(2); break;
+  }
+});
+</script>
+
+</body>
+</html>

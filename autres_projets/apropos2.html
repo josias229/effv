@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | Église du Festival de la Foi Vivante</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1a472a;
+            --accent: #ff7a00;
+            --red: #e63946;
+            --bg-dark: #0a0a0a;
+            --bg-light: #f4f7f5;
+            --text-dark: #2c3e50;
+            --text-light: #ffffff;
+            --radius: 3px;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header et Navbar - CONSERVÉ ORIGINAL */
+        .navbar-section {
+            background-color: var(--bg-dark);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar nav a {
+            margin: 0 6px;
+            text-decoration: none;
+            color: white;
+            font-size: 11px;
+            text-transform: uppercase;
+            transition: opacity 0.3s;
+            white-space: nowrap;
+            font-weight: 500;
+            padding: 5px 8px;
+        }
+
+        .navbar nav a:hover {
+            opacity: 0.8;
+            color: var(--accent);
+        }
+
+        .donate {
+            background: var(--red);
+            padding: 6px 10px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 11px;
+        }
+
+        .donate:hover {
+            background: #ef476f;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(233, 30, 99, 0.2);
+        }
+
+        /* LOGO - CONSERVÉ ORIGINAL */
+        .logo {
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 1.3;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo img {
+            margin-right: 5px;
+            height: 50px;
+        }
+
+        .logo-text {
+            line-height: 1.2;
+        }
+
+        .logo-text span:first-child {
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .logo-text span:last-child {
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        /* Bannière Hero - MODIFIÉ POUR ÊTRE PLUS SOBRE */
+        .about-hero {
+            background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9)), url('images/Pasteur_Image5.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .about-hero .subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        /* Container principal */
+        .main-container {
+            flex: 1;
+            padding-bottom: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Sous-menu sobre */
+        .subnav {
+            background: white;
+            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 25px;
+            position: sticky;
+            top: 60px;
+            z-index: 990;
+        }
+
+        .subnav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 15px;
+        }
+
+        .subnav-link {
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            margin-right: 10px;
+        }
+
+        .subnav-link:hover {
+            color: var(--accent);
+        }
+
+        .subnav-link.active {
+            color: var(--accent);
+            border-bottom: 3px solid var(--accent);
+            background-color: rgba(255, 122, 0, 0.05);
+        }
+
+        /* Layout en deux colonnes */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 65% 35%;
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        /* Colonne gauche */
+        .left-column {
+            background: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Colonne droite */
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Card de contenu */
+        .content-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        /* Titres */
+        .section-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary);
+            font-weight: 700;
+        }
+
+        .subsection-title {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 20px 0 12px;
+            font-weight: 600;
+        }
+
+        /* Texte */
+        .bio-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .bio-text p {
+            margin-bottom: 12px;
+        }
+
+        /* Citation */
+        .quote-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid var(--accent);
+            margin: 15px 0;
+            font-style: italic;
+            color: #444;
+        }
+
+        .quote-author {
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Listes */
+        .timeline-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .timeline-list li {
+            margin-bottom: 12px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .timeline-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .role-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 3px;
+            font-size: 0.95rem;
+        }
+
+        .role-description {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Listes de réalisations */
+        .achievements-list {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: achievement-counter;
+        }
+
+        .achievements-list li {
+            margin-bottom: 10px;
+            padding-left: 22px;
+            position: relative;
+            counter-increment: achievement-counter;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .achievements-list li::before {
+            content: counter(achievement-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--primary);
+            color: white;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* Listes de postes */
+        .positions-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .positions-list li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .positions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .position-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 2px;
+            font-size: 0.9rem;
+        }
+
+        .position-org {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* Section Mission */
+        .mission-section {
+            background: white;
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .mission-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .mission-quote {
+            font-style: italic;
+            color: #444;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 3px solid var(--accent);
+            font-size: 1rem;
+        }
+
+        /* Section Piliers */
+        .pillars-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .pillar-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .pillar-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .pillar-verse {
+            color: #666;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .pillar-description {
+            color: #444;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Footer - CONSERVÉ ORIGINAL */
+        footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 30px 0 15px;
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.8rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 8px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent);
+        }
+
+        /* Mobile menu - CONSERVÉ ORIGINAL */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .navbar {
+                padding: 10px 15px;
+            }
+            
+            .navbar nav a {
+                margin: 0 4px;
+                font-size: 10px;
+                padding: 4px 6px;
+            }
+            
+            .two-columns {
+                grid-template-columns: 60% 40%;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 8px 15px;
+            }
+            
+            .navbar nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 70px 20px;
+                transition: right 0.3s ease;
+                z-index: 100;
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            .navbar nav.show {
+                right: 0;
+            }
+            
+            .navbar nav a {
+                margin: 8px 0;
+                font-size: 14px;
+                display: block;
+                padding: 10px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .two-columns {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .about-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .about-hero .subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .left-column, .content-card {
+                padding: 20px;
+            }
+            
+            .pillars-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .subnav {
+                top: 55px;
+            }
+            
+            .subnav-link {
+                padding: 10px 15px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 50px 0 25px;
+            }
+            
+            .about-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .logo img {
+                height: 45px;
+            }
+            
+            .logo-text span:first-child,
+            .logo-text span:last-child {
+                font-size: 12px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .mission-title {
+                font-size: 1.5rem;
+            }
+            
+            .left-column, .content-card, .mission-section {
+                padding: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 8px 10px;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+            
+            .about-hero h1 {
+                font-size: 1.4rem;
+            }
+            
+            .about-hero .subtitle {
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+            }
+            
+            .left-column, .content-card, .mission-section {
+                padding: 15px;
+            }
+            
+            .subnav-inner {
+                padding: 0 10px;
+                overflow-x: auto;
+            }
+            
+            .subnav-link {
+                padding: 8px 12px;
+                font-size: 0.75rem;
+                white-space: nowrap;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .footer-links a {
+                margin: 0;
+            }
+        }
+
+        /* Classes pour masquer/afficher les sections */
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header avec menu - CONSERVÉ ORIGINAL -->
+    <div class="navbar-section">
+        <header class="navbar">
+            <!-- Logo centré avec le nom -->
+            <a href="#" class="logo">
+                <img src="images/EFFV_logo.png" alt="" height="65px" width="auto">
+                <div class="logo-text">
+                    <span>ÉGLISE DU FESTIVAL</span><br>
+                    <span>DE LA FOI VIVANTE</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <a href="index2.html">Accueil</a>
+                <a href="apropos.html" class="active">À Propos</a>
+                <a href="#">Le Mandat</a>
+                <a href="#">Médiathèque</a>
+                <a href="#">IBFPD</a>
+                <a href="#">Famille Chrétienne</a>
+                <a href="#">Téléchargements</a>
+                <a href="#">Éducation</a>
+                <a href="#">Nous Contacter</a>
+                <a href="#" class="donate">Faire un Don</a>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Bannière Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <span class="subtitle">Un Leadership qui Unit la Science et la Foi</span>
+            <h1>PROFESSEUR EUGÈNE MEGNI</h1>
+            <p style="opacity: 0.9; margin-top: 8px; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 0.95rem;">Professeur Titulaire de Géographie Physique à l'Université d'Abomey-Calavi & Pasteur Responsable de l'Église du Festival de la Foi Vivante</p>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="main-container">
+        
+        <!-- Sous-menu interne -->
+        <div class="subnav">
+            <div class="subnav-inner">
+                <a href="#biography" class="subnav-link active" data-target="biography">Pasteur Eugène MEGNI</a>
+                <a href="#piliers" class="subnav-link" data-target="piliers">12 Piliers</a>
+                <a href="#mission" class="subnav-link" data-target="mission">Énoncé de Mission</a>
+            </div>
+        </div>
+
+        <!-- Section Biographie (visible par défaut) -->
+        <section id="biography" class="content-section active">
+            <div class="two-columns">
+                
+                <!-- Colonne gauche (65%) -->
+                <div class="left-column">
+                    <h2 class="section-title">PROFESSEUR EUGÈNE MEGNI</h2>
+                    
+                    <div class="bio-text">
+                        <p>Le <strong>Professeur Eugène Megni</strong> s'impose comme une figure de proue au Bénin, transcendant les frontières entre la rigueur scientifique et la ferveur spirituelle. Sa carrière se déploie avec une égale intensité dans les amphithéâtres de l'Université d'Abomey-Calavi et sur la chaire de l'Église du Festival de la Foi Vivante.</p>
+                        
+                        <p>En tant que <strong>Professeur Titulaire de Géographie Physique (CAMES)</strong>, il incarne l'excellence académique au plus haut niveau, tandis qu'en tant que <strong>Pasteur</strong>, il est un canal de libération et d'espérance pour une génération en quête de repères. Il dirige l'une des assemblées les plus dynamiques de la commune d'Abomey-Calavi, à Bidossessi, un véritable havre de paix où la parole de foi transforme les vies.</p>
+                        
+                        <div class="quote-box">
+                            <p>"La science pour les problèmes terrestres, la foi pour l'espérance. Cette dualité n'est pas une contradiction, mais une synergie au service de la société."</p>
+                            <div class="quote-author">— Professeur Eugène Megni</div>
+                        </div>
+                        
+                        <p>Son influence façonne une nouvelle génération de chercheurs et de penseurs, intégrant la science béninoise dans les réseaux globaux du savoir tout en répondant aux défis locaux les plus pressants.</p>
+                    </div>
+                    
+                    <!-- Section "Qui est Eugène Megni?" -->
+                    <div class="mt-4">
+                        <h3 class="subsection-title">QUI EST EUGÈNE MEGNI ?</h3>
+                        <p>Figure de synthèse entre l'intellect et l'esprit, Eugène Megni est un leader holistique dont l'impact se mesure tant par ses publications scientifiques que par les témoignages de vies transformées.</p>
+                        
+                        <ul class="timeline-list">
+                            <li>
+                                <div class="role-title">L'Académicien de Haut Rang</div>
+                                <div class="role-description">Professeur Titulaire de Géographie Physique (CAMES), le grade le plus élevé de la hiérarchie universitaire. Il exerce au sein de la Faculté des Lettres, Arts et Sciences Humaines (FLASH) de l'Université d'Abomey-Calavi (UAC).</div>
+                            </li>
+                            <li>
+                                <div class="role-title">Le Directeur de Recherche</div>
+                                <div class="role-description">Directeur de l'École Doctorale de la FLASH, structurant la recherche de haut niveau au Bénin. Directeur du Laboratoire de Climatologie Pierre Pagney (LACEEDE) — Climat, Eau, Écosystème et Développement.</div>
+                            </li>
+                            <li>
+                                <div class="role-title">L'Expert en Développement</div>
+                                <div class="role-description">Ses travaux de recherche sont cruciaux pour la santé publique au Bénin. Il se focalise sur les interactions complexes entre le climat, l'eau potable et l'assainissement urbain, particulièrement dans la ville vulnérable de Cotonou.</div>
+                            </li>
+                            <li>
+                                <div class="role-title">Le Leader Spirituel</div>
+                                <div class="role-description">Pasteur responsable de l'Église du Festival de la Foi Vivante située à Calavi Bidossessi. Son église est reconnue pour son excellence organisationnelle et sert de centre de ralliement communautaire et spirituel.</div>
+                            </li>
+                            <li>
+                                <div class="role-title">Le Mentor</div>
+                                <div class="role-description">Reconnu pour son approche inclusive, favorisant notamment l'approche genre dans la recherche scientifique, et pour sa capacité à former une nouvelle génération de docteurs et de leaders.</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Colonne droite (35%) -->
+                <div class="right-column">
+                    <!-- Reconnaissances & Distinctions -->
+                    <div class="content-card">
+                        <h3 class="subsection-title">RECONNAISSANCES & DISTINCTIONS</h3>
+                        <ul class="achievements-list">
+                            <li>Professeur Titulaire (CAMES) - Grade le plus élevé de la hiérarchie universitaire</li>
+                            <li>Directeur de Laboratoire de Recherche (LACEEDE) - Excellence en climatologie</li>
+                            <li>Directeur d'École Doctorale - Leadership académique</li>
+                            <li>Expert National en Gestion des Ressources Hydriques - Contribution à la santé publique</li>
+                            <li>Pionnier de l'approche genre en recherche scientifique au Bénin</li>
+                            <li>Leadership spirituel reconnu - Développement communautaire intégral</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Postes & Responsabilités -->
+                    <div class="content-card">
+                        <h3 class="subsection-title">POSTES & RESPONSABILITÉS</h3>
+                        <ul class="positions-list">
+                            <li>
+                                <div class="position-title">Pasteur Responsable</div>
+                                <div class="position-org">Église du Festival de la Foi Vivante, Calavi Bidossessi (Branche de la Living Faith Church Worldwide)</div>
+                            </li>
+                            <li>
+                                <div class="position-title">Professeur Titulaire</div>
+                                <div class="position-org">Université d'Abomey-Calavi (UAC), Faculté des Lettres, Arts et Sciences Humaines</div>
+                            </li>
+                            <li>
+                                <div class="position-title">Directeur</div>
+                                <div class="position-org">École Doctorale de la FLASH, Coordination de la formation doctorale</div>
+                            </li>
+                            <li>
+                                <div class="position-title">Directeur de Laboratoire</div>
+                                <div class="position-org">Laboratoire Pierre Pagney (LACEEDE), Recherche en climatologie et développement</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 12 Piliers (masquée par défaut) -->
+        <section id="piliers" class="content-section">
+            <div class="left-column">
+                <h2 class="section-title">LES 12 PILIERS DU MINISTÈRE</h2>
+                <p class="bio-text"><strong>Église du Festival de la Foi Vivante</strong><br>
+                <small>(Dans la vision de la Living Faith Church Worldwide et du Pasteur Eugène Megni)</small></p>
+                
+                <div class="bio-text">
+                    <p>En tant que ministère s'inscrivant dans la dynamique spirituelle de la Living Faith Church Worldwide, l'Église du Festival de la Foi Vivante, sous le leadership spirituel du Pasteur Eugène Megni, repose sur douze piliers fondamentaux.</p>
+                    
+                    <p>Ces piliers soutiennent son message de libération, d'excellence et d'impact, et constituent la charpente doctrinale, spirituelle et missionnaire de l'Église. Ils sont à la fois héritiers de la vision de la Commission et contextualisés pour répondre aux réalités spirituelles, sociales et générationnelles actuelles.</p>
+                </div>
+                
+                <div class="pillars-section mt-3">
+                    <div class="pillar-item">
+                        <div class="pillar-title">1. Vision et Direction Divine</div>
+                        <div class="pillar-verse">Psaume 32:8</div>
+                        <div class="pillar-description">Dans la droite ligne de la Living Faith Church, ce pilier affirme que toute œuvre authentique de Dieu est fondée sur une vision révélée.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">2. Délivrance et Libération</div>
+                        <div class="pillar-verse">Actes 20:18</div>
+                        <div class="pillar-description">Au cœur du message du Pasteur Eugène Megni, la libération est une dimension centrale : libération spirituelle, émotionnelle et sociale.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">3. Foi Vivante</div>
+                        <div class="pillar-verse">Marc 11:23</div>
+                        <div class="pillar-description">Inspirée par la doctrine de la foi propre à la Living Faith Church, cette foi est dynamique, active et efficace.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">4. Parole, Prière, Louange et Adoration</div>
+                        <div class="pillar-verse">Psaume 149:6</div>
+                        <div class="pillar-description">Ce pilier rassemble les fondements essentiels de la vie chrétienne : La Parole, la Prière, la Louange et l'Adoration.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">5. Gloire de Dieu et Sanctification</div>
+                        <div class="pillar-verse">Ézéchiel 2:4</div>
+                        <div class="pillar-description">Dans l'héritage spirituel de la Commission, ce pilier insiste sur une foi visible par une vie transformée.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">6. Signes et Merveilles</div>
+                        <div class="pillar-verse">Éphésiens 3:4</div>
+                        <div class="pillar-description">Le ministère du Pasteur Eugène Megni se distingue par une dimension surnaturelle assumée.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">7. Apostologie</div>
+                        <div class="pillar-verse">Ésaïe 25:6</div>
+                        <div class="pillar-description">Ce pilier fonde la mission d'implantation, de structuration et de maturation spirituelle des Églises.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">8. Évangélisation</div>
+                        <div class="pillar-verse">Matthieu 28:19</div>
+                        <div class="pillar-description">Conformément à la vision de la Living Faith Church Worldwide, le salut des âmes est une priorité absolue.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">9. Prospérité</div>
+                        <div class="pillar-verse">3 Jean 1:2</div>
+                        <div class="pillar-description">Ce pilier rejoint la doctrine de la prospérité biblique chère à la Commission.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">10. Prophétique</div>
+                        <div class="pillar-verse">Ézéchiel 3:17</div>
+                        <div class="pillar-description">L'Église du Festival de la Foi Vivante se positionne comme une sentinelle spirituelle.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">11. Enseignement</div>
+                        <div class="pillar-verse">Actes 26:18</div>
+                        <div class="pillar-description">À l'image du ministère académique et spirituel du Pasteur Eugène Megni, ce pilier valorise la formation solide.</div>
+                    </div>
+                    
+                    <div class="pillar-item">
+                        <div class="pillar-title">12. Vague du Saint-Esprit</div>
+                        <div class="pillar-verse">1 Corinthiens 2:4</div>
+                        <div class="pillar-description">Ce pilier consacre la dépendance totale au Saint-Esprit comme moteur du ministère.</div>
+                    </div>
+                </div>
+                
+                <div class="quote-box mt-3">
+                    <h4 class="subsection-title">Synthèse doctrinale</h4>
+                    <p>Les 12 piliers du ministère de l'Église du Festival de la Foi Vivante traduisent une fidélité à la vision de la Living Faith Church Worldwide, tout en affirmant une identité propre, contextualisée et prophétique sous le leadership du Pasteur Eugène Megni.</p>
+                    <p>Ils constituent : une base doctrinale solide, une orientation missionnaire claire, et un socle spirituel durable pour l'édification des fidèles.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Énoncé de Mission (masquée par défaut) -->
+        <section id="mission" class="content-section">
+            <div class="mission-section">
+                <h2 class="mission-title">ÉNONCÉ DE MISSION</h2>
+                
+                <div class="bio-text">
+                    <p>La mission du Professeur Eugène Megni est double, reflétant sa nature de leader holistique. Elle s'aligne sur le mandat divin de la commission à laquelle il appartient, tout en intégrant une dimension sociétale forte.</p>
+                </div>
+                
+                <div class="mt-4">
+                    <h3 class="subsection-title">1. Le Mandat Spirituel (La Libération)</h3>
+                    <p>S'inscrivant dans la vision reçue par l'Évêque David Oyedepo, la mission spirituelle du Pasteur Megni est claire :</p>
+                    
+                    <div class="mission-quote">
+                        « L'heure est venue de libérer le peuple de toutes les oppressions du diable par la prédication de la parole de foi. »
+                    </div>
+                    
+                    <p>À travers l'Église de Bidossessi, il s'efforce de :</p>
+                    <ul class="timeline-list">
+                        <li>Restaurer l'espoir et rebâtir les destins brisés</li>
+                        <li>Enseigner les principes de la réussite divine à la jeunesse béninoise</li>
+                        <li>Créer un havre de paix où la parole de foi transforme les vies</li>
+                        <li>Appliquer sa devise : "Il n'y a rien de petit qui ne puisse devenir grand"</li>
+                    </ul>
+                    
+                    <p>Son leadership pastoral vise à former une génération affranchie, capable de surmonter les limitations par la puissance de la foi vivante.</p>
+                </div>
+                
+                <div class="mt-4">
+                    <h3 class="subsection-title">2. Le Mandat Académique et Social (Le Développement)</h3>
+                    <p>Sa mission scientifique vise à apporter des solutions concrètes aux souffrances physiques des populations :</p>
+                    
+                    <div class="mission-quote">
+                        « Utiliser la géographie physique et la climatologie comme outils de service pour garantir la sécurité sanitaire, l'accès à l'eau potable et un environnement sain pour les populations vulnérables. »
+                    </div>
+                    
+                    <p>À travers ses fonctions académiques, il œuvre pour :</p>
+                    <ul class="timeline-list">
+                        <li><strong>Recherche appliquée :</strong> Se focaliser sur les interactions complexes entre le climat, l'eau potable et l'assainissement urbain, particulièrement dans la ville vulnérable de Cotonou</li>
+                        <li><strong>Solutions endogènes :</strong> Proposer des approches adaptées pour combattre les maladies hydriques et améliorer le cadre de vie</li>
+                        <li><strong>Formation de leaders :</strong> Structurer la recherche de haut niveau au Bénin en tant que Directeur de l'École Doctorale de la FLASH</li>
+                        <li><strong>Inclusion :</strong> Favoriser l'approche genre dans la recherche scientifique et la formation</li>
+                    </ul>
+                    
+                    <p>Il œuvre pour que la connaissance technique et la vision morale avancent de pair pour résoudre les problèmes structurels de la nation.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer - CONSERVÉ ORIGINAL -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="#">À Propos</a>
+                <a href="#">Le Mandat</a>
+                <a href="#">Médiathèque</a>
+                <a href="#">IBFPD</a>
+                <a href="#">Famille Chrétienne</a>
+                <a href="#">Téléchargements</a>
+                <a href="#">Éducation</a>
+                <a href="#">Nous Contacter</a>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <p class="mt-4" style="opacity: 0.7;">&copy; 2024 Église du Festival de la Foi Vivante - Calavi Bidossessi, Bénin. Tous droits réservés.</p>
+            <p style="opacity: 0.5; font-size: 0.75rem;">Un ministère en lien avec la Living Faith Church Worldwide (Winners' Chapel International)</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Menu mobile - CONSERVÉ ORIGINAL
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.navbar nav');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            mobileMenuBtn.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.navbar nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('show');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+
+        // Navigation interne
+        const subnavLinks = document.querySelectorAll('.subnav-link');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        subnavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Mettre à jour l'état actif
+                subnavLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Afficher la section correspondante
+                const targetId = link.getAttribute('data-target');
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                });
+                
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    targetSection.style.display = 'block';
+                }
+                
+                // Fermer le menu mobile si ouvert
+                if (window.innerWidth <= 992) {
+                    navMenu.classList.remove('show');
+                    mobileMenuBtn.textContent = '☰';
+                }
+                
+                // Scroll doux vers le haut de la section
+                window.scrollTo({
+                    top: document.querySelector('.subnav').offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Effet de fondu à l'ouverture
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s';
+            
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
